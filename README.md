@@ -20,7 +20,7 @@ Advanced WordPress starter theme with Tailwind CSS, Laravel Blade and Vite
 
 Rename .env.example to .env and set the url for your site in ```APP_URL```, also you can configurate the Hot Module Replacement in ```HMR_HOST``` and ```HMR_PORT```
 
-Make sure you have all the requirements, then clone the repository and inside of the folder run the follows commands.
+Make sure you have all the requirements, then inside of the project in the terminal run the follows commands.
 
 First run:
 ```bash
