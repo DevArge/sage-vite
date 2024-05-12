@@ -15,9 +15,8 @@ export default defineConfig(async ({ mode }) => {
   const devServerConfig = loadEnv(mode, process.cwd(), 'HMR')
 
 
-  if (isDev) {
-    await cleanup()
-  }else{
+  if (!isDev) {
+      await cleanup()
       await cleanupDevManifest()
   }
 
