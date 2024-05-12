@@ -5,7 +5,7 @@
 
     <div class="max-w-[600px] mx-auto mt-4">
 
-        <img class="rounded" src="{{ Vite::asset('resources/images/sage-vite.png') }}" alt="BetUs Logo">
+        <img class="rounded" src="{{ Vite::asset('resources/images/sage-vite.png') }}" alt="Sage + Vite Logo">
 
         <p class="text-center">
             @hello('Homer', 'Simpson')
