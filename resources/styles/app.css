@@ -1,0 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import "common/_fonts.scss";
+@import "common/_header.scss";
+@import "components/_search.scss";

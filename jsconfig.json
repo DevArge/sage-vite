@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "resources",
+    /**
+     * Resolve aliases
+     */
+    "paths": {
+      "@fonts/*": ["fonts/*"],
+      "@images/*": ["images/*"],
+      "@scripts/*": ["scripts/*"],
+      "@styles/*": ["styles/*"]
+    },
+    /**
+     * Type definitions
+     */
+    "types": [
+    ],
+    "lib": ["es2018", "dom"]
+  },
+  "include": ["resources"],
+  "exclude": ["node_modules", "public"]
+}
