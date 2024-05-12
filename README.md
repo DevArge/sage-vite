@@ -1,4 +1,6 @@
 # Sage + Vite Theme
+![screenshot](https://github.com/DevArge/sage-vite/assets/43224239/cd1522eb-67d5-4a05-94ae-d3b1934c27d6)
+
 Advanced WordPress starter theme with Tailwind CSS, Laravel Blade and Vite
 ## Documentation
 
@@ -20,7 +22,7 @@ Advanced WordPress starter theme with Tailwind CSS, Laravel Blade and Vite
 
 Rename .env.example to .env and set the url for your site in ```APP_URL```, also you can configurate the Hot Module Replacement in ```HMR_HOST``` and ```HMR_PORT```
 
-Make sure you have all the requirements, then inside of the project in the terminal run the follows commands.
+Make sure you have all the requirements, then clone the repository and inside of the folder run the follows commands.
 
 First run:
 ```bash
