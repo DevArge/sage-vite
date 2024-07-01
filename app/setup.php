@@ -152,6 +152,48 @@ add_action('widgets_init', function () {
 });
 
 /**
+ * Create a .env file in theme
+ *
+ * @return void
+ */
+add_action('after_switch_theme', function () {
+    // Path to the .env file in the theme directory
+    $env_file = get_template_directory() . '/.env';
+
+    try {
+        // Check if the .env file does not exist
+        if (!file_exists($env_file)) {
+            // Get the site URL
+            $site_url = get_site_url();
+
+            // Content of the .env file
+            $env_content = <<<EOD
+            APP_URL={$site_url}
+            HMR_HOST=localhost
+            HMR_PORT=5143
+            HMR_ENTRYPOINT=http://localhost:5143
+            EOD;
+
+            // Create the .env file and write the content
+            file_put_contents($env_file, $env_content);
+        }
+    } catch (\Throwable $th) {
+        //
+    }
+});
+
+/**
+ * Manifest catch exception.
+ *
+ * @return void
+ */
+add_action('init', function(){
+    if(!is_file(public_path('manifest.json'),)){
+        throw new \Exception("Manifest not found: You must have to run 'yarn build' command inside of the theme folder.");
+    }
+});
+
+/**
  * remove jquery migrate
  *
  * @return void
