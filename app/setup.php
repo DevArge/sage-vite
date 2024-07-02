@@ -170,6 +170,7 @@ add_action('after_switch_theme', function () {
             $env_content = <<<EOD
             APP_URL={$site_url}
             HMR_HOST=localhost
+            WP_ENV=development
             HMR_PORT=5143
             HMR_ENTRYPOINT=http://localhost:5143
             EOD;
