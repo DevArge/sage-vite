@@ -27,11 +27,10 @@ add_filter('excerpt_more', function () {
 add_filter('script_loader_tag', function ($tag, $handle, $src) {
     $namespace = strtolower(wp_get_theme()->get('Name'));
 
-    if ($namespace !== $handle) {
-        return $tag;
+    // Check if is dev or prod also check if the script is the app theme script
+    if ((hmr_enabled() && $namespace === $handle) || (!hmr_enabled() && str_contains($handle, 'app/'))) {
+        $tag = str_replace(' src', ' type="module" src', $tag);
     }
-
-    $tag = str_replace(' src', ' type="module" src', $tag);
 
     return $tag;
 }, 10, 3);
