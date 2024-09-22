@@ -12,8 +12,8 @@ Advanced WordPress starter theme with Tailwind CSS, Laravel Blade and Vite
 ## Requirements
 
  - [Acorn](https://roots.io/acorn/docs/installation/) v4
- - [PHP](https://secure.php.net/manual/en/install.php) >= 8.1
- - [Node](http://nodejs.org/) >= 16.0.0
+ - [PHP](https://secure.php.net/manual/en/install.php) >= 8.2
+ - [Node](http://nodejs.org/) >= 20.0.0
  - [Yarn](https://yarnpkg.com/en/docs/install)
  - WSL is not required
 

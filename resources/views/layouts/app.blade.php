@@ -33,5 +33,7 @@
 
     @php(do_action('get_footer'))
     @php(wp_footer())
+    @yield('footer_scripts')
+
   </body>
 </html>

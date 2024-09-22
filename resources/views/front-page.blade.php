@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     <div class="max-w-[600px] mx-auto mt-4">
 
         <img class="rounded" src="{{ Vite::asset('resources/images/sage-vite.png') }}" alt="Sage + Vite Logo">
@@ -19,10 +18,13 @@
             </ul>
 
         @else
-            <p>You don't have pokemons :( </p>    
+            <p>You don't have pokemons :( </p>
         @endif
 
     </div>
-    
 
+@endsection
+
+@section('footer_scripts')
+    <script type="module" src="{!! Vite::asset('resources/scripts/pages/front-page.ts') !!}"></script>
 @endsection

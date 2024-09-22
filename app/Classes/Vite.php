@@ -778,11 +778,12 @@ class Vite implements Htmlable
     protected function chunk($manifest, $file)
     {
         $file = basename($file);
-        if (! isset($manifest[$file])) {
+        $fileName = pathinfo($file)['extension'] == "ts" ? basename($file, '.ts') . '.js' : $file;
+        if (! isset($manifest[$fileName])) {
             throw new Exception("Unable to locate file in Vite manifest: {$file}.");
         }
 
-        return ['file'=> $manifest[$file]];
+        return ['file'=> $manifest[$fileName]];
     }
 
     /**
