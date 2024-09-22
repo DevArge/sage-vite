@@ -1,8 +1,10 @@
 /node_modules
 /vendor
 /public
+.idea
 .env
 .budfiles
 npm-debug.log
 yarn-error.log
 .DS_Store
+
