@@ -37,8 +37,7 @@
     "psr-4": {
       "App\\": "app/"
     },
-    "exclude-from-classmap":["vendor/roots/acorn/src/Illuminate/Foundation/Vite.php"],
-    "files": ["app/Classes/Vite.php"]
+    "exclude-from-classmap":["vendor/roots/acorn/src/Illuminate/Foundation/Vite.php"]
   },
   "require": {
     "php": ">=8.2",
