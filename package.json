@@ -1,5 +1,6 @@
 {
-  "name": "sage",
+  "name": "sage-vite",
+  "version": "1.1.0",
   "private": true,
   "browserslist": [
     "extends @roots/browserslist-config"
@@ -32,10 +33,7 @@
     "vite-plugin-live-reload": "^3.0.3"
   },
   "dependencies": {
-    "@types/dotenv": "^8.2.0",
-    "html-minifier-terser": "^7.2.0",
     "laravel-vite-plugin": "^1.0.5",
-    "rollup-plugin-copy": "^3.5.0",
     "ts-dotenv": "^0.9.1"
   }
 }
