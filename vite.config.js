@@ -20,19 +20,22 @@ export default defineConfig(async ({ mode }) => {
         await cleanupDevManifest();
     }
 
-    // Encontrar todos los archivos TypeScript en la carpeta resources/scripts/pages/
+    // Find all files from resources/scripts/pages/
     const pagesTSFiles = glob.sync('resources/scripts/pages/**/*.ts');
 
     const rollupInput = {
         app: resolve(__dirname, 'resources/scripts/app.ts'),
         editor: resolve(__dirname, 'resources/scripts/editor.ts'),
         ...pagesTSFiles.reduce((entries, file) => {
-            // Crear un nombre relativo para Rollup
-            const name = file.replace(/^resources\/scripts\//, '').replace(/\.ts$/, '');
-            entries[name] = resolve(__dirname, file);
-            return entries;
+          // Create filename in manifest.json
+          const name = file
+                      .replace(/\\/g, '/')
+                      .replace(/^resources\/scripts\//, '')
+                      .replace(/\.ts$/, '');
+          entries[name] = resolve(__dirname, file);
+          return entries;
         }, {}),
-    };
+      };
 
     return {
         plugins: [
