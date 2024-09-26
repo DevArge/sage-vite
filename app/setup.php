@@ -208,6 +208,19 @@ add_action( 'wp_default_scripts', function ( $scripts ) {
     }
 } );
 
+/**
+ * remove Gutenberg css
+ *
+ * @return void
+ */
+add_action( 'wp_enqueue_scripts', function (){
+    wp_dequeue_style( 'global-styles' );
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-blocks-style' );
+} );
+
+
 
 /**
  * Register Ajaxs Methods.
