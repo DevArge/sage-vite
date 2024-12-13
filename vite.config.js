@@ -53,8 +53,7 @@ export default defineConfig(async ({ mode }) => {
         css: {
             preprocessorOptions: {
                 scss: {
-                    additionalData: `@import 'tailwindcss/base'; @import 'tailwindcss/components'; @import 'tailwindcss/utilities';`,
-                    api: 'modern-compiler',
+                  api: 'modern-compiler',
                 },
             },
             postcss: {
